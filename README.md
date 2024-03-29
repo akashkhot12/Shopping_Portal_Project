@@ -68,6 +68,7 @@ Response-
     `200 success` : if successfull.
 
     `500 Internal server error` : if internal server error.
+    
 ## Task Schema
 
 - `title`: Title of the task (required).
@@ -75,19 +76,14 @@ Response-
 - `status` : Status of the task (e.g., Available, Not available).
 - `createdAt` : Timestamp for when the task was created.
 - `updatedAt` : Timestamp for when the task was last updated.
+
+  
 ## Technologies Used
 
 - `Node.js`
 - `Express.js`
 - `MongoDB`
 - `Mongoose`
-## Getting Started
-
-1. Clone the repository.
-2. Install dependencies with npm install.
-3. Set up your MongoDB connection in index.js.
-4. Run the server with node server.js.
-
 
 
 
