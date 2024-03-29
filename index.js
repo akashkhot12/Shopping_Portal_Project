@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Routes
-app.use('/shopping-portal', router);
+app.use('/shoppingPortal', router);
 
 app.get("/", (req, res) => {
     res.send("hello world");
