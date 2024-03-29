@@ -1,11 +1,29 @@
 const shoppingPortal = require("../model/model");
 
-const showAllData = async(req,res)=>{
-    let result = await shoppingPortal.find();
-    res.status(201).json(result);
-    res.send(result)
+// Create task
+const createData = async(req,res)=>{
+    try {
+        const addData = new shoppingPortal(req.body);
+        await addData.save();
+        res.status(201).send(addData);
+    } catch (error) {
+        res.status(400).send(error);
+    }
 }
 
-const 
+// Read all tasks.
+const showAllData = async(req,res)=>{
+    try {
+        let showData = await shoppingPortal.find();
+        res.status(201).json(showData);
+    } catch (error) {
+        res.status(500).send(error);
+    } 
+}
 
-module.exports = {showAllData}
+
+
+
+
+module.exports = {showAllData,createData}
+
