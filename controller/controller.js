@@ -42,11 +42,11 @@ const deleteByID = async (req, res) => {
     try {
         const deleteData = await shoppingPortal.findByIdAndDelete(req.params.id);
         if (!deleteData) {
-            return res.status(404).json({ message: "Resource not found" });
+            return res.status(404).json({ message: "something went wrong" });
         }
-        res.status(201).json({ message: "Delete data successfully", editData });
+        res.status(201).json({ message: "delete data successfully", deleteData });
     } catch (error) {
-        res.status(500).json({ message: "" });
+        res.status(500).json({ message: "Resource not found", error });
     }
 }
 

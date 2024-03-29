@@ -12,6 +12,6 @@ router.post('/addingDetails', createData);
 router.put('/editDetails/:id', editDataByid);
 
 // Delete details routes 
-router.delete('/destroyDetails/:id', deleteByID);
+router.delete('/destroy-Details/:id', deleteByID);
 
 module.exports = router;
