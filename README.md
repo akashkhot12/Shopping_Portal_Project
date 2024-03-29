@@ -90,3 +90,7 @@ Response-
 ## Usage
 
 You can interact with the API using tools like Postman or by sending requests from your frontend application. The API endpoints follow RESTful conventions for managing tasks in the shopping portal.
+
+# Database 
+## Database 
+![Database Data](https://github.com/akashkhot12/Shopping_Portal_Project/tree/main/Images)
