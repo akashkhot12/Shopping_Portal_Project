@@ -24,6 +24,19 @@ const showAllData = async (req, res) => {
     }
 }
 
+// Read all tasks by ID.
+const getById = async(req,res)=>{
+    try {
+        const user = await shoppingPortal.findById(req.params.id);
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        res.status(200).json({message:user});
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+}
+
 // Update task 
 const editDataByid = async (req, res) => {
     try {
@@ -50,5 +63,5 @@ const deleteByID = async (req, res) => {
     }
 }
 
-module.exports = { showAllData, createData, editDataByid, deleteByID }
+module.exports = { showAllData,getById, createData, editDataByid, deleteByID }
 
