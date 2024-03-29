@@ -1,2 +1,47 @@
-# Shopping_Portal_Project
- Creating a Shopping Portal CRUD application using Node.js and MongoDB involves setting up a backend server using Node.js and Express.js, integrating it with MongoDB for data storage. 
+
+# Shopping Portal Project
+
+This project is a simple shopping portal implemented with a RESTful API using Node.js, Express and Mongo DB. The API enables basic CRUD (Create, Read, Update, Delete) operations for managing tasks. Each task in the shopping portal consists of a title, description, status, and timestamps for creation and last update.
+
+
+## Features
+
+- Create Details: Users can create new details with a title, description, and status.
+- Read Details: Users can retrieve all details or a specific details by its ID.
+- Update Details: Users can update existing details, including modifying the title, description, and status.
+- Delete Details: Users can delete details by their ID.
+
+
+## Endpoints
+
+- `POST /shopping-portal/add-details` : Create a new task.
+- `GET /shopping-portal/details`  : Retrieve all tasks.
+- `GET /shopping-portal/details/:id`: Retrieve a specific task by its ID.
+- `PUT /shopping-portal/edit-detail/:id`: Update an existing task.
+- `DELETE /shopping-portal/delete-details/:id`: Delete a task by its ID.
+## Task Schema
+
+- `title`: Title of the task (required).
+- `description`: Title of the task (required).
+- `status` : Status of the task (e.g., Available, Not available).
+- `createdAt` : Timestamp for when the task was created.
+- `updatedAt` : Timestamp for when the task was last updated.
+## Technologies Used
+
+- `Node.js`
+- `Express.js`
+- `MongoDB`
+- `Mongoose`
+## Getting Started
+
+1. Clone the repository.
+2. Install dependencies with npm install.
+3. Set up your MongoDB connection in index.js.
+4. Run the server with node server.js.
+
+
+
+
+## Usage
+
+You can interact with the API using tools like Postman or by sending requests from your frontend application. The API endpoints follow RESTful conventions for managing tasks in the shopping portal.
