@@ -3,6 +3,10 @@
 
 This project is a simple shopping portal implemented with a RESTful API using Node.js, Express and Mongo DB. The API enables basic CRUD (Create, Read, Update, Delete) operations for managing tasks. Each task in the shopping portal consists of a title, description, status, and timestamps for creation and last update.
 
+##  Base Url
+
+The base URL for this API is - http://localhost:3000/shopping-portal/details
+
 
 ## Features
 
