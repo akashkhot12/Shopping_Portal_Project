@@ -1,6 +1,6 @@
 const shoppingPortal = require("../model/shopping.model");
 
-// Create task
+// Create 
 const createData = async (req, res) => {
     try {
         const addData = new shoppingPortal(req.body);
@@ -11,7 +11,7 @@ const createData = async (req, res) => {
     }
 }
 
-// Read all tasks.
+// Read all.
 const showAllData = async (req, res) => {
     try {
         let showData = await shoppingPortal.find();
@@ -24,7 +24,7 @@ const showAllData = async (req, res) => {
     }
 }
 
-// Read task by ID
+// Read by ID
 const getById = async (req, res) => {
     try {
         const showDataByid = await shoppingPortal.findById(req.params.id);
@@ -37,7 +37,7 @@ const getById = async (req, res) => {
     }
 }
 
-// Update task 
+// Update  
 const editDataByid = async (req, res) => {
     try {
         const editData = await shoppingPortal.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -50,7 +50,7 @@ const editDataByid = async (req, res) => {
     }
 }
 
-// Delete task
+// Delete 
 const deleteByID = async (req, res) => {
     try {
         const deleteData = await shoppingPortal.findByIdAndDelete(req.params.id);
