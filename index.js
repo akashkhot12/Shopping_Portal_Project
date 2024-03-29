@@ -1,10 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const router = require("./routes/routes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+
+// Routes
+app.use('/shopping-portal', router);
 
 app.get("/", (req, res) => {
     res.send("hello world");
@@ -12,7 +16,6 @@ app.get("/", (req, res) => {
 
 
 // To connect the database and start the server once the database is connected.
-
 mongoose
     .connect(
         "mongodb+srv://akashkhot03:Akash3975@shopping-portal.za0omy4.mongodb.net/",
