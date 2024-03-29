@@ -24,16 +24,16 @@ const showAllData = async (req, res) => {
     }
 }
 
-// Read all tasks by ID.
-const getById = async(req,res)=>{
+// Read task by ID
+const getById = async (req, res) => {
     try {
-        const user = await shoppingPortal.findById(req.params.id);
-        if (!user) {
-            return res.status(404).json({ error: 'User not found' });
+        const showDataByid = await shoppingPortal.findById(req.params.id);
+        if (!showDataByid) {
+            return res.status(404).json({ message: "Resource not found" });
         }
-        res.status(200).json({message:user});
+        res.status(200).json(showDataByid);
     } catch (error) {
-        res.status(500).json({ error: 'Server error' });
+        res.status(500).json({ message: showDataByid });
     }
 }
 
@@ -63,5 +63,5 @@ const deleteByID = async (req, res) => {
     }
 }
 
-module.exports = { showAllData,getById, createData, editDataByid, deleteByID }
+module.exports = { showAllData, getById, createData, editDataByid, deleteByID }
 

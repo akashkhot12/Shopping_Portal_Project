@@ -6,7 +6,7 @@ const { showAllData, createData, editDataByid, deleteByID, getById } = require('
 router.get('/details', showAllData);
 
 // get by ID details routes
-router.get('/detials/:id',getById)
+router.get('/details/:id',getById)
 
 // adding details routes
 router.post('/add-detail', createData);
