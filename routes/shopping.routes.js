@@ -9,7 +9,7 @@ router.get('/details', showAllData);
 router.get('/details/:id',getById)
 
 // adding details routes
-router.post('/add-detail', createData);
+router.post('/add-details', createData);
 
 // Updating details routes
 router.put('/edit-detail/:id', editDataByid);

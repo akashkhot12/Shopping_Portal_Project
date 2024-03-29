@@ -5,7 +5,10 @@ const shoppingSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    description: String,
+    description: {
+        type: String,
+        required: true
+    },
     status: {
         type: String,
         enum: ['Available', 'Not Available'],
