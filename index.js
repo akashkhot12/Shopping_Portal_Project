@@ -10,9 +10,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 // Routes
-app.use('/shopping-portal',router)
-
-
+app.use('/shopping-portal', router)
 
 // To connect the database and start the server once the database is connected.
 mongoose
@@ -35,4 +33,4 @@ mongoose
         console.log("Error connecting to database", err);
     });
 
-    app.use('/shoppingPortal', router);
+app.use('/shoppingPortal', router);
