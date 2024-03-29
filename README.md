@@ -15,10 +15,55 @@ This project is a simple shopping portal implemented with a RESTful API using No
 ## Endpoints
 
 - `POST /shopping-portal/add-details` : Create a new task.
+    
+Response- 
+
+    `201 Created`: if successfull.
+
+    `400 Bad Request` : if invalid input.
+
 - `GET /shopping-portal/details`  : Retrieve all tasks.
+
+
+ Response- 
+
+    `404 Not found `: if resource not found.
+
+    `200 success` : if successfull.
+
+    `500 Internal server error` : if internal server error.
+
 - `GET /shopping-portal/details/:id`: Retrieve a specific task by its ID.
+
+Response- 
+
+    `404 Not found `: if resource not found.
+
+    `200 success` : if successfull.
+
+    `500 Internal server error` : if internal server error.
+
+
 - `PUT /shopping-portal/edit-detail/:id`: Update an existing task.
+
+Response- 
+
+    `404 Not found `: if resource not found.
+
+    `200 success` : if successfull.
+
+    `500 Internal server error` : if internal server error.
+
+
 - `DELETE /shopping-portal/delete-details/:id`: Delete a task by its ID.
+
+Response- 
+
+    `404 Not found `: if resource not found.
+
+    `200 success` : if successfull.
+
+    `500 Internal server error` : if internal server error.
 ## Task Schema
 
 - `title`: Title of the task (required).
