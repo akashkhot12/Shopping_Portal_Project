@@ -2,20 +2,24 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./routes/routes");
 const bodyParser = require('body-parser');
+const config = require("./envirment/config")
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// middleware
 app.use(express.json());
 app.use(bodyParser.json());
 
 // Routes
-app.use('/shopping-portal', router)
+app.use('/shopping-portal', router);
 
 // To connect the database and start the server once the database is connected.
+
+const MONGODB_URI = config.MONGODB_URI;
 mongoose
     .connect(
-        "mongodb+srv://akashkhot03:Akash3975@shopping-portal.za0omy4.mongodb.net/",
+        MONGODB_URI,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,
@@ -33,4 +37,5 @@ mongoose
         console.log("Error connecting to database", err);
     });
 
-app.use('/shoppingPortal', router);
+
+

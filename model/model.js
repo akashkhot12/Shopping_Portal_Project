@@ -8,8 +8,8 @@ const shoppingSchema = new mongoose.Schema({
     description: String,
     status: {
         type: String,
-        enum: ['pending', 'completed'],
-        default: 'pending'
+        enum: ['Available', 'Not Available'],
+        default: 'Available'
     },
     createdAt: {
         type: Date,
@@ -21,4 +21,4 @@ const shoppingSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Task', shoppingSchema);
+module.exports = mongoose.model('Shopping-Portal-Details', shoppingSchema);
