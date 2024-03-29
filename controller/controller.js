@@ -5,7 +5,7 @@ const createData = async (req, res) => {
     try {
         const addData = new shoppingPortal(req.body);
         await addData.save();
-        res.status(201).json({ message: "data insert successfully", addData });
+        res.status(201).json({ message: "Data insert successfully", addData });
     } catch (error) {
         res.status(400).json({ message: error });
     }
@@ -15,7 +15,10 @@ const createData = async (req, res) => {
 const showAllData = async (req, res) => {
     try {
         let showData = await shoppingPortal.find();
-        res.status(201).json(showData);
+        if (!showData) {
+            return res.status(404).json({ message: "Resource not found" });
+        }
+        res.status(200).json(showData);
     } catch (error) {
         res.status(500).json({ message: error });
     }
@@ -26,11 +29,11 @@ const editDataByid = async (req, res) => {
     try {
         const editData = await shoppingPortal.findByIdAndUpdate(req.params.id, req.body, { new: true });
         if (!editData) {
-            return res.status(404).json({ message: "Something went wrong" });
+            return res.status(404).json({ message: "Resource not found" });
         }
-        res.json({ message: "update data successfully", editData });
+        res.status(201).json({ message: "Update data successfully", editData });
     } catch (error) {
-        res.status(400).json({ message: error });
+        res.status(400).json({ message: "Invalid input", error });
     }
 }
 
@@ -39,11 +42,11 @@ const deleteByID = async (req, res) => {
     try {
         const deleteData = await shoppingPortal.findByIdAndDelete(req.params.id);
         if (!deleteData) {
-            return res.status(404).send();
+            return res.status(404).json({ message: "Resource not found" });
         }
-        res.send(deleteData);
+        res.status(201).json({ message: "Delete data successfully", editData });
     } catch (error) {
-        res.status(500).send(error);
+        res.status(500).json({ message: "" });
     }
 }
 
