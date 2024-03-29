@@ -93,4 +93,4 @@ You can interact with the API using tools like Postman or by sending requests fr
 
 # Database 
 ## Database 
-![Database Data](https://github.com/akashkhot12/Shopping_Portal_Project/tree/main/Images/database.png)
+![Database Data](https://github.com/akashkhot12/Shopping_Portal_Project/blob/441f2a7f01d188962c05e6d99059db8e461e168a/Images/database.png)
