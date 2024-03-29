@@ -1,4 +1,4 @@
-const shoppingPortal = require("../model/model");
+const shoppingPortal = require("../model/shopping.model");
 
 // Create task
 const createData = async (req, res) => {
@@ -31,7 +31,7 @@ const editDataByid = async (req, res) => {
         if (!editData) {
             return res.status(404).json({ message: "Resource not found" });
         }
-        res.status(201).json({ message: "Update data successfully", editData });
+        res.status(200).json({ message: "Update data successfully", editData });
     } catch (error) {
         res.status(400).json({ message: "Invalid input", error });
     }
@@ -44,7 +44,7 @@ const deleteByID = async (req, res) => {
         if (!deleteData) {
             return res.status(404).json({ message: "something went wrong" });
         }
-        res.status(201).json({ message: "delete data successfully", deleteData });
+        res.status(200).json({ message: "delete data successfully", deleteData });
     } catch (error) {
         res.status(500).json({ message: "Resource not found", error });
     }

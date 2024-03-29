@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const router = require("./routes/routes");
+const router = require("./routes/shopping.routes");
 const bodyParser = require('body-parser');
-const config = require("./envirment/config")
+const config = require("./config/config")
 
 const app = express();
 const PORT = process.env.PORT || 3000;
