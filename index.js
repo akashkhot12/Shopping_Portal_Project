@@ -8,11 +8,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Routes
-app.use('/shoppingPortal', router);
+app.use('/shopping-portal',router)
 
-app.get("/", (req, res) => {
-    res.send("hello world");
-});
 
 
 // To connect the database and start the server once the database is connected.
@@ -35,3 +32,5 @@ mongoose
     .catch((err) => {
         console.log("Error connecting to database", err);
     });
+
+    app.use('/shoppingPortal', router);

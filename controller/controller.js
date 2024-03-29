@@ -1,14 +1,11 @@
-const express = require("express");
-const app = express();
-const Task = require("../model/model")
+const shoppingPortal = require("../model/model");
 
-const readAllTasks = app.get('/' , async(req , res)=>{
-    try {
-        const tasks = await Task.find().toString();
-        res.send(tasks);
-    } catch (error) {
-        res.status(500).send(error);
-    }
-})
+const showAllData = async(req,res)=>{
+    let result = await shoppingPortal.find();
+    res.status(201).json(result);
+    res.send(result)
+}
 
-module.exports = {readAllTasks}
+const 
+
+module.exports = {showAllData}

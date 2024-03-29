@@ -1,8 +1,8 @@
 const express = require('express');
-const { readAllTasks } = require('../controller/controller');
 const router = express.Router();
+const {showAllData } = require('../controller/controller');
 
-router.get('/showDetails',readAllTasks);
+router.get('/showDetails',showAllData);
 router.post('/addingDetails');
 router.put('/editDetails');
 router.delete('/destroyDetails');
